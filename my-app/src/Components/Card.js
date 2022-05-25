@@ -1,0 +1,20 @@
+import React from "react";
+import profile from "../Assets/Images/profile.jpg";
+
+const Card = (feature) => {
+    const {name,description} = feature
+  return (
+    <div className=" bg-[#1E4077] text-white  pb-6 ">
+      <img src={profile} className="w-[350px] h-[350px]  border-b-8"/>
+      <div className="px-4">
+      <p className=" text-lg font-semibold text-left">Michael Field - Associate Broker</p>
+      <div className="flex font-thin justify-between">
+        <p>(518) 708-6591</p>
+        <p>5.6k</p>
+      </div>
+      </div>
+    </div>
+  );
+};
+
+export default Card;
