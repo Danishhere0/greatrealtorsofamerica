@@ -89,7 +89,7 @@ const Home = () => {
         </div>
       </div>
       <div className="w-12/12 mx-auto justify-between flex flex-col-reverse lg:flex-row my-10 lg:my-20">
-        <div className="w-6/12 md:mt-6 md:w-11/12 flex flex-row justify-around h-6/6">
+        <div className="w-6/12 md:mt-6 md:w-11/12 md:flex hidden flex-row justify-around h-6/6">
           <img className="w-[200px]" src={second1} />
           <img className="w-[200px]" src={second2} />
           <img className="w-[200px]" src={second3} />
