@@ -4,24 +4,24 @@ import { Link } from "react-router-dom";
 const CreateAccount = ({step ,setStep}) => {
   return (
     <div>
-      <div className="w-6/12 mx-auto mt-12 mb-3 flex flex-wrap justify-evenly">
-        <input placeholder="Name" className="border py-3 pl-3 pr-32 mb-4 " />
+      <div className="md:w-6/12 w-11/12 mx-auto mt-12 mb-3 flex flex-col md:flex-row md:flex-wrap md:justify-between">
+        <input placeholder="Name" className="border py-3 pl-3 w-full md:w-[49%] mb-4 " />
         <input
           placeholder="Last Name"
-          className="border py-3 pl-3 pr-32 mb-4 "
+          className="border py-3 pl-3 w-full md:w-[49%] mb-4 "
         />
-        <input placeholder="Email" className="border py-3 pl-3 pr-32 mb-4 " />
-        <input placeholder="Phone" className="border py-3 pl-3 pr-32 mb-4" />
+        <input placeholder="Email" className="border py-3 pl-3 w-full md:w-[49%] mb-4 " />
+        <input placeholder="Phone" className="border py-3 pl-3 w-full md:w-[49%] mb-4" />
         <input
           placeholder="Password"
-          className="border py-3 pl-3 pr-32 mb-4 "
+          className="border py-3 pl-3 w-full md:w-[49%] mb-4 "
         />
         <input
           placeholder="Confirm Password"
-          className="border py-3 pl-3 pr-32 mb-4 "
+          className="border py-3 pl-3 w-full md:w-[49%] mb-4 "
         />
       </div>
-      <div className="w-[46%] mx-auto text-left ">
+      <div className="md:w-[49%] w-11/12 mx-auto text-left ">
         <p className="text-xs text-[#1E4077] mb-4">
           By Clicking Sign Up you agree to our{" "}
           <span className="text-[#E62E2D] underline">terms</span>. Learn how we

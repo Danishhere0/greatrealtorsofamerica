@@ -73,23 +73,23 @@ const Profile = () => {
     },
   ];
   return (
-    <div className="w-9/12 mx-auto">
+    <div className="md:w-9/12 mx-auto">
       <div className="">
         <div className="">
           <img
             src={backgroundImage}
-            className=" object-cover bg-cover h-[60vh] w-full "
+            className=" object-cover bg-cover md:h-[60vh] w-full "
           />
         </div>
         <div>
-          <div className="flex ml-4 -mt-24 items-center text-left pb-4">
-            <img className="w-[170px] mr-2" src={profileImage} />
+          <div className="flex flex-col ml-4 -mt-16 md-mt-24 items-center text-left pb-4">
+            <img className="md:w-[170px] w-52 mr-auto" src={profileImage} />
             <div className="flex flex-col">
-              <div className="flex flex-col  text-white">
+              <div className="flex flex-col md-text-white mt-4 text-[#1E4077]">
                 <label className="text-xl font-semibold">Ahmed Majeed</label>
                 <label>COUNTRY BOY REALTY</label>
               </div>
-              <div className="flex flex-col mt-10 text-[#E62E2D]">
+              <div className="flex flex-col md:mt-10 mt-4 text-[#E62E2D]">
                 <label className="text-lg font-semibold">
                   Write Matthew Lader' 1st Recommendation{" "}
                 </label>
@@ -99,8 +99,8 @@ const Profile = () => {
           </div>
         </div>
       </div>
-      <div className=" flex flex-row">
-        <div className=" text-left w-8/12">
+      <div className="flex md:flex-row w-11/12 mx-auto flex-col ">
+        <div className="text-left md:w-8/12">
           <div className="border-b-[3px] border-[#E62E2D]">
             <h2 className="text-2xl font-semibold mb-3 text-[#1E4077]">
               About Mithlesh Arya
@@ -122,7 +122,7 @@ const Profile = () => {
               Board
             </p>
           </div>
-          <div className="w-10/12 justify-between flex flex-row py-5 ">
+          <div className="w-10/12 justify-between flex flex-col md:flex-row py-5 ">
             <div>
               <h2 className="text-2xl font-semibold mb-3 text-[#1E4077]">
                 Experience
@@ -140,9 +140,9 @@ const Profile = () => {
             <h2 className="text-2xl font-semibold mb-3 text-[#1E4077]">
               Areas Served
             </h2>
-            <div className="flex flex-wrap flex-row w-8/12">
+            <div className="flex flex-wrap flex-row md:w-8/12">
               {Areas.map((x) => (
-                <p className="text-lg mb-3 w-4/12">{x.name}</p>
+                <p className="text-lg mb-3 mx-2 md:w-4/12">{x.name},</p>
               ))}
             </div>
           </div>
@@ -150,9 +150,9 @@ const Profile = () => {
             <h2 className="text-2xl font-semibold mb-3 text-[#1E4077]">
               Specializations
             </h2>
-            <div className="flex flex-wrap flex-row w-8/12">
+            <div className="flex flex-wrap flex-row md:w-8/12">
               {Specializations.map((x) => (
-                <p className="text-lg mb-3 w-3/12">{x.name}</p>
+                <p className="text-lg mb-3 mx-2 md:w-3/12">{x.name},</p>
               ))}
             </div>
           </div>
@@ -160,17 +160,17 @@ const Profile = () => {
             <h2 className="text-2xl font-semibold mb-3 text-[#1E4077]">
               Business Hours
             </h2>
-            <div className="flex flex-col w-8/12">
+            <div className="flex flex-col md:w-8/12">
               {Hours.map((x) => (
                 <div className="flex flex-row">
-                  <p className="text-lg mb-3 w-3/12">{x.day}</p>
-                  <p className="text-lg mb-3 w-5/12">{x.time}</p>
+                  <p className="text-lg mb-3 w-5/12 md:w-3/12">{x.day}</p>
+                  <p className="text-lg mb-3 md:w-5/12">{x.time}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
-        <div className="h-auto h-fit text-left w-[32%] ml-auto bg-[#1E4077] p-5 text-sm text-[white]" >
+        <div className=" h-fit text-left md:w-[32%] ml-auto bg-[#1E4077] p-5 text-sm text-[white]" >
           <div className=" pb-2 border-b-2 border-[#E62E2D]">
             <h2 className="text-2xl font-semibold mb-3">Contact details</h2>
             <p className=" mb-5">(518) 378-1235 Office</p>

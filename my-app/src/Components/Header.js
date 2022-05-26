@@ -17,41 +17,34 @@ import {
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
-import logo from '../Assets/Images/logo.png'
+import logo from "../Assets/Images/logo.png";
 
 const Header = () => {
   const solutions = [
     {
-      name: "Analytics",
-      description:
-        "Get a better understanding of where your traffic is coming from.",
-      href: "#",
+      name: "Home",
+      to: "/",
       icon: ChartBarIcon,
     },
     {
-      name: "Engagement",
-      description: "Speak directly to your customers in a more meaningful way.",
-      href: "#",
-      icon: CursorClickIcon,
+      name: "About us",
+        to: "/about",
+      icon: ChartBarIcon,
     },
     {
-      name: "Security",
-      description: "Your customers' data will be safe and secure.",
-      href: "#",
-      icon: ShieldCheckIcon,
+      name: "Find Realtor",
+       to: "find-realtor",
+      icon: ChartBarIcon,
     },
     {
-      name: "Integrations",
-      description: "Connect with third-party tools that you're already using.",
-      href: "#",
-      icon: ViewGridIcon,
+      name: "Services",
+       to: "/",
+      icon: ChartBarIcon,
     },
     {
-      name: "Automations",
-      description:
-        "Build strategic funnels that will drive your customers to convert",
-      href: "#",
-      icon: RefreshIcon,
+      name: "Contact",
+       to: "/",
+      icon: ChartBarIcon,
     },
   ];
   const callsToAction = [
@@ -119,12 +112,8 @@ const Header = () => {
           <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
-                <span className="sr-only">Workflow</span>
-                <img
-                  className="h-8 w-auto sm:h-10"
-                  src={logo}
-                  alt=""
-                />
+                {/* <span className="sr-only">Workflow</span> */}
+                <img className="h-8 w-auto sm:h-10" src={logo} alt="" />
               </a>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
@@ -141,9 +130,7 @@ const Header = () => {
                 href="#"
                 className="text-base font-medium text-black hover:text-gray-900"
               >
-                
                 <Link to="/">Home</Link>
-
               </a>
               <a
                 href="#"
@@ -170,7 +157,7 @@ const Header = () => {
                 Contact
               </a>
               <button className="bg-[#E62E2D] text-white px-3 py-2">
-                <Link to="/sign-up">Advertise with us</Link> 
+                <Link to="/sign-up">Advertise with us</Link>
               </button>
             </Popover.Group>
             {/* <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -209,7 +196,7 @@ const Header = () => {
                   <div>
                     <img
                       className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                      src={logo}
                       alt="Workflow"
                     />
                   </div>
@@ -220,12 +207,12 @@ const Header = () => {
                     </Popover.Button>
                   </div>
                 </div>
-                <div className="mt-6">
-                  <nav className="grid gap-y-8">
+                <div className="mt-6 ">
+                  <nav className="grid gap-y-8 bg-white">
                     {solutions.map((item) => (
                       <a
                         key={item.name}
-                        href={item.href}
+                        // href={item.href}
                         className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                       >
                         <item.icon
@@ -233,7 +220,7 @@ const Header = () => {
                           aria-hidden="true"
                         />
                         <span className="ml-3 text-base font-medium text-gray-900">
-                          {item.name}
+                          <Link to={item.to}> {item.name} </Link>
                         </span>
                       </a>
                     ))}
@@ -255,7 +242,7 @@ const Header = () => {
                   >
                     Docs
                   </a>
-                  {resources.map((item) => (
+                  {/* {resources.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
@@ -263,7 +250,7 @@ const Header = () => {
                     >
                       {item.name}
                     </a>
-                  ))}
+                  ))} */}
                 </div>
                 <div>
                   <a
