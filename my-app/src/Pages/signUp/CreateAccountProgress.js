@@ -5,7 +5,7 @@ import { IoMapOutline } from "react-icons/io5";
 
 const CreateAccountProgress = ({step, setStep}) => {
   return (
-    <div className="w-8/12 mx-auto my-20">
+    <div className="lg:w-8/12 md:w-11/12 mx-auto my-20">
       <div className="md:w-12/12 items-start flex flex-col md:flex-row text-[#1E4077]">
         <div className="flex flex-col md:w-2/12 mx-auto">
           <label className="bg-[#E62E2D] p-4 mx-auto text-4xl rounded-full text-white">

@@ -2,7 +2,7 @@ import React from "react";
 
 const AddLicense = ({ step, setStep }) => {
   return (
-    <div className="md:w-8/12 w-11/12 mx-auto my-20 text-left">
+    <div className="lg:w-8/12 w-11/12 mx-auto my-20 text-left">
       <div className="flex flex-col">
         <select className=" mb-5 bg-transparent md:w-5/12 text-slate-400 border-2 pl-3 py-3">
           <option selected>Select License Type</option>

@@ -46,7 +46,7 @@ const Home = () => {
           <img src={bannerImage} className="h-full w-full object-cover" />
         </div>
         <div className="flex flex-col lg:w-10/12 lg:mx-auto lg:flex-row justify-around">
-          <div className="lg:w-5/12 md:w-10/12 w-11/12 md:mx-auto my-6">
+          <div className="lg:w-5/12 md:w-10/12 w-11/12 lg:mx-0  mx-auto my-6">
             <h1 className="text-12 text-4xl mb-10">
               Great Agents Find Great Properties!
             </h1>
@@ -156,13 +156,13 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col w-11/12 md:flex-row md:w-8/12 pb-16 mx-auto text-center justify-between">
-          <div className="border p-8 md:p-16">
+        <div className="flex flex-col w-11/12 md:flex-row lg:w-8/12 pb-16 mx-auto text-center justify-between">
+          <div className="border p-8 lg:p-16">
             <h1 className="text-8xl">05</h1>
             <p>Year of Experience</p>
             <p>Qualified Great Agents</p>
           </div>
-          <div className="flex md:flex-wrap md:flex-row flex-col items-center text-left md:w-8/12">
+          <div className="flex md:flex-wrap md:flex-row flex-col items-center text-left md:w-7/12 lg:w-8/12">
             <div className="md:w-5/12 md:mt-0 mt-6">
               <p>VETTED AGENTS – QUALITY GUARANTEED</p>
             </div>
@@ -182,10 +182,10 @@ const Home = () => {
             Our Clients Love Us.
           </h2>
         </div>
-        <div className="flex flex-col md:w-11/12 md:mx-auto md:items-center md:flex-row justify-between ">
+        <div className="flex flex-col md:w-12/12 lg:w-11/12 md:mx-auto md:items-center md:flex-row justify-between ">
           <div className="md:w-[25%]">
             <img
-              className="w-[300px] h-[300px]  md:mr-auto mb-3 rounded-full border-t-8 border-l-4 border-r-4  border   border-[#E62E2D]"
+              className="lg:w-[300px] lg:h-[300px] w-[170px] h-[170px] mr-auto mb-3 rounded-full border-t-8 border-l-4 border-r-4  border   border-[#E62E2D]"
               src={profile}
             />
           </div>

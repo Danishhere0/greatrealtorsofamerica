@@ -2,7 +2,7 @@ import React from "react";
 
 const ServiceArea = ({step ,setStep}) => {
   return (
-    <div className="md:w-8/12 w-11/12 mx-auto my-20 text-left">
+    <div className="lg:w-8/12 w-11/12 mx-auto my-20 text-left">
       <div className="md:w-9/12 w-12/12 flex flex-col md:flex-row mb-5">
         <div className="md:w-5/12 w-12/12 md:mr-auto">
           <label className="">Areas Served</label>

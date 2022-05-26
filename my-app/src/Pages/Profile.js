@@ -1,6 +1,13 @@
 import React from "react";
 import profileImage from "../Assets/Images/profileImage.jpg";
 import backgroundImage from "../Assets/Images/backgroundImage.jpg";
+import {AiTwotoneStar,AiFillInstagram,AiOutlineMail,AiOutlineGlobal,AiOutlineShareAlt} from 'react-icons/ai'
+import {BiPhoneCall,BiLocationPlus} from 'react-icons/bi'
+import {FaFacebookF,FaTwitter} from 'react-icons/fa'
+import {GrLocation} from 'react-icons/gr'
+
+
+
 
 const Profile = () => {
   const Specializations = [
@@ -73,7 +80,7 @@ const Profile = () => {
     },
   ];
   return (
-    <div className="md:w-9/12 mx-auto">
+    <div className="lg:w-9/12 mx-auto">
       <div className="">
         <div className="">
           <img
@@ -82,10 +89,10 @@ const Profile = () => {
           />
         </div>
         <div>
-          <div className="flex flex-col ml-4 -mt-16 md-mt-24 items-center text-left pb-4">
-            <img className="md:w-[170px] w-52 mr-auto" src={profileImage} />
+          <div className="flex flex-col md:flex-row ml-4 -mt-16 md:-mt-24 items-center text-left pb-4">
+            <img className="md:w-[170px] w-52 md:mr-2 mr-auto" src={profileImage} />
             <div className="flex flex-col">
-              <div className="flex flex-col md-text-white mt-4 text-[#1E4077]">
+              <div className="flex flex-col md:text-white mt-4 text-[#1E4077]">
                 <label className="text-xl font-semibold">Ahmed Majeed</label>
                 <label>COUNTRY BOY REALTY</label>
               </div>
@@ -93,7 +100,7 @@ const Profile = () => {
                 <label className="text-lg font-semibold">
                   Write Matthew Lader' 1st Recommendation{" "}
                 </label>
-                <label className="text-xs">4.6(26)</label>
+                <label className="text-xs flex items-center"><span className="text-2xl"><AiTwotoneStar/></span>4.6(26)</label>
               </div>
             </div>
           </div>
@@ -122,7 +129,7 @@ const Profile = () => {
               Board
             </p>
           </div>
-          <div className="w-10/12 justify-between flex flex-col md:flex-row py-5 ">
+          <div className="lg:w-10/12 justify-between flex flex-col md:flex-row py-5 ">
             <div>
               <h2 className="text-2xl font-semibold mb-3 text-[#1E4077]">
                 Experience
@@ -140,7 +147,7 @@ const Profile = () => {
             <h2 className="text-2xl font-semibold mb-3 text-[#1E4077]">
               Areas Served
             </h2>
-            <div className="flex flex-wrap flex-row md:w-8/12">
+            <div className="flex flex-wrap flex-row lg:w-8/12">
               {Areas.map((x) => (
                 <p className="text-lg mb-3 mx-2 md:w-4/12">{x.name},</p>
               ))}
@@ -150,7 +157,7 @@ const Profile = () => {
             <h2 className="text-2xl font-semibold mb-3 text-[#1E4077]">
               Specializations
             </h2>
-            <div className="flex flex-wrap flex-row md:w-8/12">
+            <div className="flex flex-wrap flex-row lg:w-8/12">
               {Specializations.map((x) => (
                 <p className="text-lg mb-3 mx-2 md:w-3/12">{x.name},</p>
               ))}
@@ -160,7 +167,7 @@ const Profile = () => {
             <h2 className="text-2xl font-semibold mb-3 text-[#1E4077]">
               Business Hours
             </h2>
-            <div className="flex flex-col md:w-8/12">
+            <div className="flex flex-col lg:w-8/12">
               {Hours.map((x) => (
                 <div className="flex flex-row">
                   <p className="text-lg mb-3 w-5/12 md:w-3/12">{x.day}</p>
@@ -173,17 +180,18 @@ const Profile = () => {
         <div className=" h-fit text-left md:w-[32%] ml-auto bg-[#1E4077] p-5 text-sm text-[white]" >
           <div className=" pb-2 border-b-2 border-[#E62E2D]">
             <h2 className="text-2xl font-semibold mb-3">Contact details</h2>
-            <p className=" mb-5">(518) 378-1235 Office</p>
-            <p className=" mb-5">marya@realtor.com</p>
-            <p className=" mb-5">Mithlesh Arya <span>Website</span></p>
+            <p className=" mb-5 items-center flex flex-row"><span className="text-2xl mr-2"><BiPhoneCall/></span>(518) 378-1235 Office</p>
+            <p className=" mb-5 items-center flex flex-row"><span className="text-2xl mr-2"><AiOutlineMail/></span> marya@realtor.com</p>
+            <p className=" mb-5 items-center flex flex-row"><span className="text-2xl mr-2"><AiOutlineGlobal/></span> Mithlesh Arya <span>Website</span></p>
           </div>
           <div className="py-8 border-b-2 border-[#E62E2D]">
-            <p className=" w-6/12 py-5 ">COUNTRY BOY REALTY <span >753 E. Main Street, Cobleskill, NY, 12043</span></p>
-            <p>Share Profile</p>
+            <p className="items-center flex flex-row text-white"><span className="text-2xl mr-2 text-white"><BiLocationPlus/></span>COUNTRY BOY REALTY </p>
+            <p className="ml-8 mb-2 w-6/12">753 E. Main Street, Cobleskill, NY, 12043</p>
+            <p className="items-center flex flex-row"><span className="text-2xl mr-2"><AiOutlineShareAlt/></span>Share Profile</p>
           </div>
           <div className="py-8 border-b-2 border-[#E62E2D]">
-            <p>Social Media</p>
-            <div></div>
+            <p className="mb-3">Social Media</p>
+            <div className=" flex flex-row text-2xl justify-between w-28"><FaFacebookF/><AiFillInstagram/><FaTwitter/></div>
           </div>
           <div className="w-full py-8">
             <p className="mb-5">Email Dominix Indelicato</p>
