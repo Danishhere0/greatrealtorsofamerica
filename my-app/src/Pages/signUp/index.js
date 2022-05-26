@@ -16,7 +16,7 @@ const SignUp = () => {
     return (
 
     <div>
-       <CreateAccountProgress/>
+       <CreateAccountProgress setStep={setStep} step={step}/>
        {step==1 ?(<CreateAccount setStep={setStep} step={step}/>):(
         step==2 ?(<BusinessInformation setStep={setStep} step={step}/>):(
             step==3 ?(<ServiceArea setStep={setStep} step={step}/>):(

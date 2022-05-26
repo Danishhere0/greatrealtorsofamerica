@@ -3,9 +3,8 @@ import CreateAccountProgress from "./CreateAccountProgress";
 import { TiUploadOutline } from "react-icons/ti";
 
 const BusinessInformation = ({ step, setStep }) => {
-  const profileRef = useRef()
-  const backgroundRef = useRef()
-
+  const profileRef = useRef();
+  const backgroundRef = useRef();
   const Hours = [
     {
       day: "Monday",
@@ -100,16 +99,18 @@ const BusinessInformation = ({ step, setStep }) => {
             <div className="flex flex-row my-6 lg:w-[65%] justify-between">
               <div>
                 <label className="text-sm">Upload Profile</label>
-                <div className="mt-3 border-[#E62E2D] border-2 flex flex-col border-dashed p-3">
+                <div onClick={()=>profileRef.current.click()} className="mt-3 cursor-pointer border-[#E62E2D] border-2 flex flex-col border-dashed p-3">
                   <label className="text-[#E62E2D] text-6xl mx-auto  items-center">
                     <TiUploadOutline />
                   </label>
                   <label>Select Image</label>
                 </div>
               </div>
+              <input className="hidden" type="file" ref={backgroundRef} />
+              <input className="hidden" type="file" ref={profileRef} />
               <div>
                 <label className="text-sm mb-2">Upload Background</label>
-                <div className="mt-3 flex flex-col border-dashed border-2 border-[#E62E2D] p-3">
+                <div  onClick={()=>backgroundRef.current.click()} className=" cursor-pointer mt-3 flex flex-col border-dashed border-2 border-[#E62E2D] p-3">
                   <label className="text-[#E62E2D] text-6xl mx-auto items-center">
                     <TiUploadOutline />
                   </label>

@@ -89,12 +89,12 @@ const Home = () => {
         </div>
       </div>
       <div className="w-12/12 mx-auto justify-between flex flex-col-reverse lg:flex-row my-10 lg:my-20">
-        <div className="w-6/12 md:mt-6 md:w-11/12 md:flex hidden flex-row justify-around h-6/6">
-          <img className="w-[200px]" src={second1} />
-          <img className="w-[200px]" src={second2} />
-          <img className="w-[200px]" src={second3} />
+        <div className="lg:w-6/12 md:mt-6 md:w-12/12 md:flex hidden flex-row justify-around h-6/6">
+          <img className="w-[240px] h-[450px]" src={second1} />
+          <img className="w-[240px]" src={second2} />
+          <img className="w-[240px]" src={second3} />
         </div>
-        <div className="w-11/12 lg:w-5/12 mx-auto text-left">
+        <div className="w-11/12 lg:w-5/12 m-auto text-left">
           <h5 className="text-[#E62E2D] text-lg mb-2">What We Do</h5>
           <h1 className=" text-5xl mb-4">
             The Agent-Client Matchmaking Portal

@@ -8,6 +8,7 @@ import {
   LightningBoltIcon,
   ScaleIcon,
 } from "@heroicons/react/outline";
+import { Link } from "react-router-dom";
 
 const FindRealtor = () => {
   const features = [
@@ -89,7 +90,8 @@ const FindRealtor = () => {
           <div className="mt-10">
             <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-20 md:gap-y-10">
               {features.map((feature) => (
-                <Card feature={feature} />
+                <Link to='/profile'>
+                <Card feature={feature} /></Link>
               ))}
             </dl>
           </div>

@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
+import { IoIosAddCircleOutline } from "react-icons/io";
 
 const AddLicense = ({ step, setStep }) => {
+  const licenseRef = useRef();
+  const certificateRef = useRef();
+  const idRef = useRef();
+  
   return (
     <div className="lg:w-8/12 w-11/12 mx-auto my-20 text-left">
       <div className="flex flex-col">
@@ -11,16 +16,35 @@ const AddLicense = ({ step, setStep }) => {
           placeholder="License Number"
           className=" mb-5 bg-transparent md:w-5/12 text-white border-2 pl-3 py-3"
         />
+        <input className="hidden" type="file" ref={licenseRef} />
+        <input className="hidden" type="file" ref={certificateRef} />
+        <input className="hidden" type="file" ref={idRef} />
+
         Upload License
-        <div className="w-12/12 flex mt-1 flex-col md:flex-row mb-5">
-          <div className="md:w-[30%] w-full mr-auto">
-            <div className=" border-2 p-3 h-32 mb-5"></div>
+        <div className="bg w-12/12 flex mt-1 text-white flex-col md:flex-row mb-5">
+          <div onClick={()=>certificateRef.current.click()} className="bg-[#E62E2D] border-[#1E4077] border-4 md:w-[30%] w-full mr-auto items-center">
+            <p className="flex flex-row justify-center items-center h-36 m-auto">
+              <span className="text-4xl mr-2">
+                <IoIosAddCircleOutline />
+              </span>{" "}
+              ADD CERTIFICATE
+            </p>
           </div>
-          <div className="md:w-[30%] w-full  mr-auto">
-            <div className="border-2 p-3 h-32 mb-5"></div>
+          <div onClick={()=>licenseRef.current.click()} className="bg-[#E62E2D] border-[#1E4077] border-4 md:w-[30%] w-full  mr-auto">
+            <p className="flex flex-row justify-center items-center h-36 m-auto">
+              <span className="text-4xl mr-2">
+                <IoIosAddCircleOutline />
+              </span>
+              ADD LICENSE
+            </p>
           </div>
-          <div className="md:w-[30%] w-full  mr-auto">
-            <div className="border-2 p-3 h-32 mb-5"></div>
+          <div onClick={()=>idRef.current.click()} className="bg-[#E62E2D] border-[#1E4077] border-4 md:w-[30%] w-full  mr-auto">
+            <p className="flex flex-row justify-center items-center h-36 m-auto">
+              <span className="text-4xl mr-2">
+                <IoIosAddCircleOutline />
+              </span>
+              ADD PERSONAL ID
+            </p>
           </div>
         </div>
         <button
