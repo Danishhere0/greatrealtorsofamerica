@@ -2,7 +2,7 @@ import React from "react";
 import bannerImage from "../Assets/Images/Home.jpg";
 
 const About = () => {
-  const about1 = [
+  const about = [
     {
       h1: "Where Serious Home Shoppers",
       h2: "Can Find A Seriously Great Agent.",
@@ -38,7 +38,7 @@ const About = () => {
         </div>
       </div>
       <div className="lg:w-8/12 w-11/12 text-left mx-auto my-6">
-        {about1.map((x) => (
+        {about.map((x) => (
           <div className="my-10">
             <h2 className="text-2xl font-semibold mb-3 text-[#1E4077]">{x.h1}</h2>
             <h2 className="text-2xl mb-3 text-[#E62E2D]">{x.h2}</h2>

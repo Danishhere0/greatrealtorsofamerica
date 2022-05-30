@@ -45,7 +45,7 @@ const Footer = () => {
           <a className="pb-2">support@sitename.com</a>
         </div>
       </div>
-      <div className=" border-t-2 md:p-5 py-2 text-center"><p>2021 Great Relators of America. All rights reserved. <span className=" underline">Privacy Statement</span></p></div>
+      <div className=" border-t-2 md:p-5 py-2 px-2 text-center"><p>2021 Great Relators of America. All rights reserved. <span className=" underline">Privacy Statement</span></p></div>
     </div>
   );
 };

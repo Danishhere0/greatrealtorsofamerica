@@ -18,33 +18,34 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
 import logo from "../Assets/Images/logo.png";
+import { AiOutlineHome } from "react-icons/ai";
 
 const Header = () => {
   const solutions = [
     {
       name: "Home",
       to: "/",
-      icon: ChartBarIcon,
+      // icon: AiOutlineHome,
     },
     {
       name: "About us",
       to: "/about",
-      icon: ChartBarIcon,
+      // icon: ChartBarIcon,
     },
     {
       name: "Find Realtor",
       to: "find-realtor",
-      icon: ChartBarIcon,
+      // icon: ChartBarIcon,
     },
     {
       name: "Services",
       to: "/",
-      icon: ChartBarIcon,
+      // icon: ChartBarIcon,
     },
     {
       name: "Contact",
       to: "/",
-      icon: ChartBarIcon,
+      // icon: ChartBarIcon,
     },
   ];
   const callsToAction = [
@@ -148,7 +149,7 @@ const Header = () => {
                 href="#"
                 className="text-base font-medium text-black hover:text-gray-900"
               >
-                Services
+                <Link to="/services">Services</Link>
               </a>
               <a
                 href="#"
@@ -201,10 +202,10 @@ const Header = () => {
                           // href={item.href}
                           className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                         >
-                          <item.icon
+                          {/* <item.icon
                             className="flex-shrink-0 h-6 w-6 text-indigo-600"
                             aria-hidden="true"
-                          />
+                          /> */}
                           <span className="ml-3 text-base font-medium text-gray-900">
                             {item.name}
                           </span>

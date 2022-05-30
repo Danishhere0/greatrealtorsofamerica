@@ -13,6 +13,10 @@ import ServiceArea from './Pages/signUp/ServiceArea';
 import AddLicense from './Pages/signUp/AddLicense';
 import Login from './Pages/Login';
 import SignUp from './Pages/signUp';
+import Service from './Pages/Service';
+import index from './Pages/manage';
+import manage from './Pages/manage';
+import Manage from './Pages/manage';
 
 
 function App() {
@@ -23,6 +27,7 @@ function App() {
     <Routes>
       <Route index element={<Home/>} exact/>
       <Route path='/about' element={<About/>} exact/>
+      <Route path='/services' element={<Service/>} exact/>
       <Route path='/find-realtor' element={<FindRealtor/>} exact/>
       <Route path='/create-account' element={<CreateAccount/>} exact/>
       <Route path='/business-information' element={<BusinessInformation/>} exact/>
@@ -31,6 +36,7 @@ function App() {
       <Route path='/sign-up' element={<SignUp/>} exact/>
       <Route path='/login' element={<Login/>} exact/>
       <Route path='/profile' element={<Profile/>} exact/>
+      <Route path='/manage' element={<Manage/>} exact/>
     </Routes>
     <Footer/>
     </BrowserRouter>
